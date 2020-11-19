@@ -18,9 +18,9 @@ check_root
 echo "Connection info sql"
 read -p "Server[]: " IPSERVERRADIUS
 read -p "Port[]: " PORT
+read -p "SQLUsername: " SQLUSERNAME
+read -p "SQLPassword: " SQLPASSWORD
 read -p "Radius password[]: " RADIUSPASSWD
-
-
 
 ##Configure Locatime zone file
 $(pwd)/src/localtime-config.sh
