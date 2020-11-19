@@ -23,8 +23,6 @@ package_install(){
         fi
     done
 
-    sudo dpkg -i $(pwd)/package/coova-chilli_1.4_armhf.deb
-
 }
 
 package_install
