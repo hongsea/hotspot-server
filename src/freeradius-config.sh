@@ -46,8 +46,10 @@ freeradius_config(){
     #secret
     grep -rli RADIUSSECRET /etc/freeradius/3.0/clients.conf | xargs -i@ sed -i s+RADIUSSECRET+${RADIUSPASSWD}+g @
 
+    #delete expiration
+    rm -rf /etc/freeradius/3.0/mods-enabled/expiration
     systemctl enable freeradius
-    systemctl start freeradius
+    systemctl restart freeradius
     echo -e "${GREEN}[ OK ] Start service freeradius!${NC}"
 
 }

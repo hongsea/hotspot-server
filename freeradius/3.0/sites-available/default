@@ -380,10 +380,6 @@ authorize {
 	#  LDAP and/or SQL queries for TTLS or PEAP.
 	#
 
-#	monthlycounter
-#	expiration
-#	accessperiod
-
 	eap {
 		ok = return
 #		updated = return
@@ -428,17 +424,6 @@ authorize {
                 reject
         }
 
-	#check accessperiod
-	#accessperiod{
-	#	reject = 1
-	#}
-	#if (reject){
-	#	update reply{
-	#		Reply-Message := 'You have reached uptime limit. Please check your hotspot plan. Thank You!'
-	#	}
-	#reject
-	#}
-
 	#check expiration
 	expiration{
 	   userlock = 1
@@ -449,11 +434,6 @@ authorize {
 	   }
 	   reject
 	}
-
-#        quotalimit
-#        monthlycounter
-#	dailybandwidthcounter
-#	chillispot_max_bytes
 
 	#
 	#  If you are using /etc/smbpasswd, and are also doing
