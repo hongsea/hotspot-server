@@ -83,17 +83,17 @@ sqlcounter expire_on_login {
 }
 
 
-sqlcounter accessperiod {
-        sql_module_instance = sql
-        dialect = ${modules.sql.dialect}
-
-        counter_name = Max-Access-Period-Time
-        check_name = Access-Period
-        key = User-Name
-        reset = never
-
-        $INCLUDE ${modconfdir}/sql/counter/${dialect}/${.:instance}.conf
-}
+#sqlcounter accessperiod {
+#        sql_module_instance = sql
+#        dialect = ${modules.sql.dialect}
+#
+#        counter_name = Max-Access-Period-Time
+#        check_name = Access-Period
+#        key = User-Name
+#        reset = never
+#
+#        $INCLUDE ${modconfdir}/sql/counter/${dialect}/${.:instance}.conf
+#}
 
 expiration {
 	sql_module_instance = sql
