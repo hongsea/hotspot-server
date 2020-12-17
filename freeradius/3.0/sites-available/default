@@ -419,7 +419,7 @@ authorize {
 	#check reject
 	if(reject){
                 update reply{
-                        Reply-Message := 'Login Faild, Please check your username and password. Thank You!'
+                        Reply-Message := 'ឈ្មេាះ ​ឬ ​ពាក្យសម្ងាត់​មិន​ត្រឹមត្រូវ'
                 }
                 reject
         }
@@ -430,7 +430,7 @@ authorize {
 	}
 	if (userlock){
 	   update reply{
-	       Reply-Message := 'Your account has expired. Please check your hotspot plan. Thank You!.'
+	       Reply-Message := 'គណនីរបស់អ្នកត្រូវបានផុតកំណត់ សូមពិនិត្យមើលគំរោងរបស់អ្នក អរគុណ'
 	   }
 	   reject
 	}
